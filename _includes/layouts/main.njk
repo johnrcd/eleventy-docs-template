@@ -1,0 +1,55 @@
+---
+layout: layouts/_base.njk
+---
+
+{# top right: site name and logo #}
+<div class="siteContainer">
+
+	{# LEFT COLUMN #}
+	<div class="siteContainer__left">
+
+		{# TOP LEFT: SITE NAME/LOGO #}
+		<div class="logo">
+			<div class="logo__title">{{ metadata.site_name }}</div>
+			<img class="logo__img" src="{{ metadata.logo_path }}" />
+		</div>
+
+		{# MIDDLE LEFT: SEARCH BAR #}
+		<div class="panel">
+			<a>search for page</a>
+		</div>
+
+		{# REST OF LEFT: LINKS #}
+		<aside class="panel sideLinks">
+			<p class="sideLinks__sectionName">learn</p>
+			<ul class="sideLinks__ul">
+				<li class="sideLinks__li">
+					<a class="sideLinks__a">getting started</a>
+				</li>
+				<li><a>layouts</a></li>
+				<li><a>graphics</a></li>
+				<li><a>customization</a></li>
+				<li><a>midi standard</a></li>
+			</ul>
+			<p>links</p>
+			<ul class="linkStack">
+				<li><a>youtube</a></li>
+				<li><a>bsky</a></li>
+			</ul>
+			<p>bonus</p>
+			<ul class="linkStack">
+				<li><a>site themes</a></li>
+				<li><a>random page</a></li>
+			</ul>
+		</aside>
+	</div>
+
+	{# MIDDLE COLUMN: CONTENT #}
+	<main class="siteContainer__main panel">
+		{{ content | safe }}
+	</main>
+
+	{# RIGHT COLUMN #}
+	<div class="siteContainer__right">
+	</div>
+</div>

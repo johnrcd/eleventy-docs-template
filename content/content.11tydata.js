@@ -7,6 +7,6 @@
 
 
 export default {
-	layout: "layouts/home.njk",
+	layout: "layouts/main.njk",
 	permalink: "/{{ title | slugify }}/",
 };

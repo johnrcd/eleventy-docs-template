@@ -14,16 +14,12 @@
 
 	--dot-bg: black;
 	--dot-color:rgba(119, 119, 119, 1);
-	--dot-size: 1px;
+	--dot-size: 2px;
 	--dot-space: 22px;
-	--color-bg-html:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
-
+	--color-bg-html: rgb(0, 0, 0);
 	--color-bg: rgb(10, 9, 9);
 	--color-bg-border: rgba(32, 32, 32, 1);
-	--color-bg-border-accent: rgba(67, 67, 67, 1);
+	--color-bg-border-accent: rgba(56, 56, 56, 1);
 	--color-bg-content:
 	--color-bg-accent: rgb(142, 231, 241);
 	--color-text-primary: rgb(240, 240, 240);
