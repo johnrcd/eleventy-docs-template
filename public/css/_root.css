@@ -8,10 +8,23 @@
 }
 
 :root{
+	--font-title: "Manrope", "Poppins", "Open Sans", sans-serif;
 	--font-normal: "Manrope", "Poppins", "Open Sans", sans-serif;
 	--font-mono: "monospace";
 
-	--color-bg: linear-gradient(233deg, rgba(1,2,8,1) 0%, rgba(4,14,24,1) 11%, rgba(5,17,19,1) 33%, rgba(6,16,24,1) 48%, rgba(6,12,20,1) 67%, rgba(6,9,22,1) 87%, rgba(3,9,22,1) 100%);
+	--dot-bg: black;
+	--dot-color:rgba(119, 119, 119, 1);
+	--dot-size: 1px;
+	--dot-space: 22px;
+	--color-bg-html:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+
+	--color-bg: rgb(10, 9, 9);
+	--color-bg-border: rgba(32, 32, 32, 1);
+	--color-bg-border-accent: rgba(67, 67, 67, 1);
+	--color-bg-content:
 	--color-bg-accent: rgb(142, 231, 241);
 	--color-text-primary: rgb(240, 240, 240);
 	--color-text-secondary:rgb(132, 166, 167);
@@ -38,7 +51,7 @@
 
 
 html {
-	background: var(--color-bg);
+	background: var(--color-bg-html);
 
 	/* https://www.frontend.fyi/tutorials/finally-a-fix-for-100vh-on-mobile */
 	min-height: 100dvh;
@@ -53,11 +66,20 @@ h1, h2, h3, h4, h5, h6, p, li, a, input, textarea, div, select, article, main {
 
 }
 
+h1 {
+	margin-top: 0;
+}
+
 a:hover {
 	color: var(--color-text-accent);
+}
+
+img {
+	max-width: 100%;
 }
 
 ::selection {
 	color: var(--color-highlight-text);
 	background: var(--color-highlight-bg);
 }
+

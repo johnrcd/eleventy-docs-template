@@ -1,6 +1,6 @@
 {
-	"title": "Eleventy PagesCMS Project Template",
-	"short_title": "11ty/PagesCMS Base",
+	"site_name": "Eleventy Docs Template",
+	"logo_path": "/public/img/site_logo.png",
 	"url": "https://example.com/",
 	"language": "en",
 	"description": "Project Template for a static site built with Eleventy and Paper CMS.",
