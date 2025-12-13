@@ -10,7 +10,7 @@ layout: layouts/_base.njk
 
 		{# TOP LEFT: SITE NAME/LOGO #}
 		<div class="logo">
-			<div class="logo__title">{{ metadata.site_name }}</div>
+			<a class="logo__title" href="/">{{ metadata.site_name }}</a>
 			<img class="logo__img" src="{{ metadata.logo_path }}" />
 		</div>
 
@@ -21,26 +21,21 @@ layout: layouts/_base.njk
 
 		{# REST OF LEFT: LINKS #}
 		<aside class="panel sideLinks">
-			<p class="sideLinks__sectionName">learn</p>
-			<ul class="sideLinks__ul">
-				<li class="sideLinks__li">
-					<a class="sideLinks__a">getting started</a>
-				</li>
-				<li><a>layouts</a></li>
-				<li><a>graphics</a></li>
-				<li><a>customization</a></li>
-				<li><a>midi standard</a></li>
-			</ul>
-			<p>links</p>
-			<ul class="linkStack">
-				<li><a>youtube</a></li>
-				<li><a>bsky</a></li>
-			</ul>
-			<p>bonus</p>
-			<ul class="linkStack">
-				<li><a>site themes</a></li>
-				<li><a>random page</a></li>
-			</ul>
+			{% for section in site_data.side_links %}
+				<p class="sideLinks__sectionName">{{ section.name }}</p>
+				<ul class="sideLinks__ul">
+					{% for link in section.links %}
+					<li class="sideLinks__li">
+						<a
+							class="sideLinks__a"
+							href="{{ link.url }}"
+						>
+							{{ link.text }}
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
 		</aside>
 	</div>
 

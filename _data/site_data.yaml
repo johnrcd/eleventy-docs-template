@@ -1,0 +1,133 @@
+intro:
+  name: Rovi Decena
+  subtitle: Software Developer
+
+about:
+  - Hi, I'm Rovi! I write code for apps, websites, and games.
+
+  - I first started programming because I was interested in making games,
+    though I ended up figuring out that I liked coding a little more than
+    everything else.
+
+  - For inquiries, questions, or anything else, the best way to contact me
+    is through my <a href="mailto:johnrcd.ar@gmail.com">email</a>.
+
+side_links:
+  - name: learn
+    links:
+      - text: getting started
+        url: /getting-started/
+
+      - text: layouts
+        url: /layouts/
+
+      - text: graphics
+        url: /graphics/
+
+      - text: customization
+        url: /customization/
+
+      - text: midi standard
+        url: /midi-standard/
+
+  - name: links
+    links:
+      - text: youtube
+        url: https://www.youtube.com/watch?v=f3PbbdfZ5-8
+
+      - text: bsky
+        url: https://bsky.app/profile/rovidecena.com
+
+  - name: extra
+    links:
+      - text: site themes
+        url: /themes/
+
+projects:
+  main:
+    - name: Lume
+      description:
+        - "MIDI-based audio visualizer that generates graphics in real-time.
+          Runs as a website, able to run directly on the web."
+      img: lume_glowingSnow.png
+      alt: Lume example
+      link: https://www.youtube.com/watch?v=-ML9xjx_3I8&list=PLu5ZBi46blCLJZnpxVVIUcqzb_J1fL4R9
+      video: /video/lume_glowingSnow.mp4
+      learn_more: /lume/
+      tags:
+        - TypeScript
+        - Vite
+        - Vitest
+        - p5.js
+
+    - name: Taskboard
+      description:
+        - "Full-stack web application that acts as a ticket tracker for my
+          personal projects. Submit bug reports, request new features, or
+          suggest new projects to work on."
+      img: taskboard.png
+      alt: Taskboard website home page
+      link: https://taskboard.rovidecena.com/
+      tags:
+        - React
+        - Django (DRF)
+        - Tailwind CSS
+
+  secondary:
+    - name: Monospace
+      description:
+        - "2D platformer about a mouse trying to get home."
+      img: monospace.png
+      alt: Closeup of the player character in Monospace
+      link: https://johnrcd.itch.io/monospace
+      video: /video/monospace.mp4
+      tags:
+        - Unity
+
+    - name: rovi_blog
+      description:
+        - "Blog about projects I'm working on, typically related to programming,
+          game development, music, or a combination thereof."
+      img: blog.png
+      alt: Post on my personal blog.
+      link: https://blog.rovidecena.com/
+      tags:
+        - Eleventy
+
+    - name: ULTRAVIOLET
+      description:
+        - "Website for ULTRAVIOLET, a band that I'm in."
+      img: ultraviolet.png
+      alt: ULTRAVIOLET band logo
+      link: https://ultravioletspace.com/
+      tags:
+        - Eleventy
+
+    - name: Arcfest II
+      description:
+        - "Fast-paced fighter where you fight to stay inside a constantly
+          shrinking safe zone."
+      img: arcfest.png
+      alt: Two of the player characters (spaceships) facing towards
+        each other, each firing missles.
+      tags:
+        - Unity
+
+contact:
+  links:
+    - name: Email
+      short: johnrcd.ar@gmail.com
+      url: mailto:johnrcd.ar@gmail.com
+
+    - name: LinkedIn
+      short: /in/rovi-decena/
+      url: https://www.linkedin.com/in/rovi-decena/
+
+    - name: Bluesky
+      short: "@rovidecena.com"
+      url: https://bsky.app/profile/rovidecena.com
+
+  special:
+    name: All Links
+    short: linktr.ee/johnrcd
+    url: https://linktr.ee/johnrcd
