@@ -1,12 +1,29 @@
-# eleventy_docs_template
+# eleventy-docs-template
 
 This repository is a template for building websites for documentation. It uses [Eleventy](https://www.11ty.dev/) as a static site generator.
-
-Note that this template was designed around my own use cases, and may be more opinionated than it should be. For a more generic Eleventy project template, you may want to consider my [Eleventy PagesCMS project](https://github.com/johnrcd/eleventy_pagescms_base), which is a more general-purpose repository that has support for PagesCMS as it's content management system by default.
 
 ## Features
 
 - All documentation-related pages stored in `/content/docs/`
-- Majority of links
+- Search bar implemented with [Pagefind](https://pagefind.app/)
+- YAML for configuration
 
+## Getting Started
 
+Download and install:
+
+```
+git clone git@github.com:johnrcd/eleventy-docs-template.git
+cd eleventy-docs-template
+npm i
+```
+
+To run:
+
+```
+npm run dev
+npm run index
+```
+
+> [!NOTE]
+> `npm run index` builds the database needed to run the search functionality. It only needs to be run after you make a build to setup the project, or whenever you update the content and need to reindex.
