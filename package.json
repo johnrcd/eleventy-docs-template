@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --quiet",
 		"index": "npx -y pagefind --site _site",
-		"build": "npx @11ty/eleventy*",
+		"build": "npx @11ty/eleventy*"
 	},
 	"author": {
 		"name": "Rovi Decena",
