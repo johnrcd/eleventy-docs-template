@@ -16,7 +16,12 @@
 			{% include "public/css/__reset.css" %}
 			{% include "public/css/_root.css" %}
 			{% include "public/css/styles.css" %}
+			{% include "public/css/pagefind.css" %}
 		{% endcss %}
+
+		{% js %}
+			{# {% include "public/js/search.js" %} #}
+		{% endjs %}
 
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>

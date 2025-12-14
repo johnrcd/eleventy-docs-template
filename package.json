@@ -4,8 +4,11 @@
 	"description": "A starter repository for a documentation website using the Eleventy site generator.",
 	"type": "module",
 	"scripts": {
-		"build": "npx @11ty/eleventy",
-		"dev": "npx @11ty/eleventy --serve --quiet"
+		"dev": "npx @11ty/eleventy --serve --quiet",
+		"index": "npx -y pagefind --site _site",
+		"build": "ELEVENTY_PRODUCTION=true run-s clean build:*",
+		"build:11ty": "eleventy",
+		"build:index": "npx -y pagefind --site dist"
 	},
 	"author": {
 		"name": "Rovi Decena",
@@ -22,6 +25,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-navigation": "^1.0.5",
+		"@zachleat/pagefind-search": "^1.0.3",
 		"markdown-it": "^14.1.0",
 		"markdown-it-anchor": "^9.2.0",
 		"yaml": "^2.8.2"

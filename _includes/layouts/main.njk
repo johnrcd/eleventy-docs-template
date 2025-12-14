@@ -16,7 +16,7 @@ layout: layouts/_base.njk
 
 		{# MIDDLE LEFT: SEARCH BAR #}
 		<div class="panel">
-			<a>search for page</a>
+			<a class="searchButton" href="/search/">search for page ⌕</a>
 		</div>
 
 		{# REST OF LEFT: LINKS #}
@@ -40,7 +40,7 @@ layout: layouts/_base.njk
 	</div>
 
 	{# MIDDLE COLUMN: CONTENT #}
-	<main class="siteContainer__main panel">
+	<main class="siteContainer__main panel" data-pagefind-body>
 		{{ content | safe }}
 	</main>
 

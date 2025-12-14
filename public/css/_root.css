@@ -30,6 +30,9 @@
 	--color-highlight-text:rgb(10, 9, 9);
 	--color-highlight-bg: rgb(122, 255, 252);
 
+	--underline-width-title: 4px;
+	--underline-width: 2px;
+
 	/* --- */
 
 	font-size: 100%;
@@ -50,6 +53,7 @@ html {
 
 	/* https://www.frontend.fyi/tutorials/finally-a-fix-for-100vh-on-mobile */
 	min-height: 100dvh;
+	overflow-y: scroll;
 }
 
 * {
