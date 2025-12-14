@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			
+					Search Customization | name of site
+			
+		</title>
+		<meta name="description" content="Project template for a static site built with Eleventy.">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/public/img/favicon/site.webmanifest">
+
+		
+
+		
+
+		<link rel="stylesheet" href="/dist/0kQsw5EZpU.css">
+		
+	</head>
+	<body>
+		<div>
+
+<div class="siteContainer">
+
+	
+	<div class="siteContainer__left">
+
+		
+		<div class="siteCard">
+			<img class="siteCard__logo" src="/public/img/site_logo.png">
+			<a class="siteCard__title" href="/">name of site</a>
+		</div>
+
+		<div class="sideContainer__sticky">
+			
+			<div class="panel">
+				<a class="searchButton" href="/search/">search for page ⌕</a>
+			</div>
+
+			
+			<aside class="panel sideLinks">
+				
+					<p class="sideLinks__sectionName">configure</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-card/">
+								site name/logo
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/css/">
+								appearance
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/permalinks/">
+								links
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/search-customization/">
+								searching
+							</a>
+						</li>
+						
+					</ul>
+				
+					<p class="sideLinks__sectionName">extra</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-info/">
+								site info
+							</a>
+						</li>
+						
+					</ul>
+				
+			</aside>
+		</div>
+	</div>
+
+	
+	<main class="siteContainer__main panel" data-pagefind-body="">
+		
+			<h1 id="search-customization">Search Customization</h1>
+		
+		<p>The search page is used to help find content on the website. It is powered by Pagefind, a search library that is fully static, with no server processing required.</p>
+<p>To learn more about Pagefind specifically, you can check out <a href="https://pagefind.app/">their website</a>.</p>
+<h2 id="usage" tabindex="-1"><a class="header-anchor" href="#usage">Usage</a></h2>
+<p>Pagefind works by processing your build files, creating a directory to store a static search index that it uses as it's database.</p>
+<p>As part of it's build process, it also provides a pre-built search interface within it's directory. This is used by the Eleventy Docs Template.</p>
+<p>To perform this indexing locally, run the command:</p>
+<p><code>npm run index</code>.</p>
+<p>This is equivalent to:</p>
+<p><code>npx -y pagefind --site _site</code></p>
+<p>Note that in your production server (where you host the website) this will need to be run everytime the contents of your website update. This is done automatically through <code>npm run build</code>, which builds the site in Eleventy, then runs Pagefind after.</p>
+<p>Indexing and normal static site building are treated as two separate processes in development due to the time needed to index, which increases at a faster rate with every bit of content added to your website compared to the main building. Unless you're directly testing the search, we recommend you avoid indexing.</p>
+
+	</main>
+
+	
+	<div class="siteContainer__right">
+	</div>
+</div>
+</div>
+		<div class="halftone"></div>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			
+					Site Card | name of site
+			
+		</title>
+		<meta name="description" content="Project template for a static site built with Eleventy.">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/public/img/favicon/site.webmanifest">
+
+		
+
+		
+
+		<link rel="stylesheet" href="/dist/0kQsw5EZpU.css">
+		
+	</head>
+	<body>
+		<div>
+
+<div class="siteContainer">
+
+	
+	<div class="siteContainer__left">
+
+		
+		<div class="siteCard">
+			<img class="siteCard__logo" src="/public/img/site_logo.png">
+			<a class="siteCard__title" href="/">name of site</a>
+		</div>
+
+		<div class="sideContainer__sticky">
+			
+			<div class="panel">
+				<a class="searchButton" href="/search/">search for page ⌕</a>
+			</div>
+
+			
+			<aside class="panel sideLinks">
+				
+					<p class="sideLinks__sectionName">configure</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-card/">
+								site name/logo
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/css/">
+								appearance
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/permalinks/">
+								links
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/search-customization/">
+								searching
+							</a>
+						</li>
+						
+					</ul>
+				
+					<p class="sideLinks__sectionName">extra</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-info/">
+								site info
+							</a>
+						</li>
+						
+					</ul>
+				
+			</aside>
+		</div>
+	</div>
+
+	
+	<main class="siteContainer__main panel" data-pagefind-body="">
+		
+			<h1 id="site-card">Site Card</h1>
+		
+		<p>This website's name and logo are shown at the top left of every page. Internally, this is known as the <em>site card</em>.</p>
+<div style="max-width:200px; margin: auto">
+	<div class="siteCard">
+		<img class="siteCard__logo" src="/public/img/site_logo.png">
+		<a class="siteCard__title" href="/">name of site</a>
+	</div>
+</div>
+<h2 id="update-site-name" tabindex="-1"><a class="header-anchor" href="#update-site-name">Update Site Name</a></h2>
+<p>In <code>_data/metadata.yaml</code>, change the <code>site_name</code> variable.</p>
+<pre><code class="language-yaml">site_name: [change this]
+</code></pre>
+<p>When writing content on your site and you want to ensure that the site title is written the same no matter what, use the code {<span></span>{ metadata.site_name }} in your content files.</p>
+<p>Copy-pasting that code will produce this:</p>
+<p>name of site</p>
+<p>This allows you to write the name of your site anywhere, and have it be updated if you ever decide to change the site name.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Curly braces (&quot;{&quot; and &quot;}&quot;) are treated as special characters, because content files are configured to preprocess any Nunjucks code within them.</p>
+</div>
+<h2 id="update-site-logo" tabindex="-1"><a class="header-anchor" href="#update-site-logo">Update Site Logo</a></h2>
+<p>The site logo is stored at <code>public/img/site_logo.png</code>. You can simply replace this file.</p>
+<h3 id="change-site-logo-url" tabindex="-1"><a class="header-anchor" href="#change-site-logo-url">Change Site Logo URL</a></h3>
+<p>There's a greater-than-zero chance that your logo isn't a png (could be svg, or ...jpeg??), or that you simply don't like the file name <code>site_logo</code>. In either case, you can name your logo whatever you wish, and simply change the file path.</p>
+<p>In <code>_data/metadata.yaml</code>, change the <code>logo_path</code> variable</p>
+<pre><code class="language-yaml">logo_path: /public/img/[YOUR FILE HERE].[PLUS THE EXTENSION]
+</code></pre>
+<p>Technically, you don't have to store your logo in <code>public/img/</code>, but it's recommended that you do.</p>
+<h3 id="favicon" tabindex="-1"><a class="header-anchor" href="#favicon">Favicon</a></h3>
+<p>See the page on <a href="/favicon/">favicons</a> for more information.</p>
+
+	</main>
+
+	
+	<div class="siteContainer__right">
+	</div>
+</div>
+</div>
+		<div class="halftone"></div>
+	</body>
+</html>

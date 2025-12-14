@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			
+					CSS | name of site
+			
+		</title>
+		<meta name="description" content="Project template for a static site built with Eleventy.">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/public/img/favicon/site.webmanifest">
+
+		
+
+		
+
+		<link rel="stylesheet" href="/dist/0kQsw5EZpU.css">
+		
+	</head>
+	<body>
+		<div>
+
+<div class="siteContainer">
+
+	
+	<div class="siteContainer__left">
+
+		
+		<div class="siteCard">
+			<img class="siteCard__logo" src="/public/img/site_logo.png">
+			<a class="siteCard__title" href="/">name of site</a>
+		</div>
+
+		<div class="sideContainer__sticky">
+			
+			<div class="panel">
+				<a class="searchButton" href="/search/">search for page ⌕</a>
+			</div>
+
+			
+			<aside class="panel sideLinks">
+				
+					<p class="sideLinks__sectionName">configure</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-card/">
+								site name/logo
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/css/">
+								appearance
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/permalinks/">
+								links
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/search-customization/">
+								searching
+							</a>
+						</li>
+						
+					</ul>
+				
+					<p class="sideLinks__sectionName">extra</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-info/">
+								site info
+							</a>
+						</li>
+						
+					</ul>
+				
+			</aside>
+		</div>
+	</div>
+
+	
+	<main class="siteContainer__main panel" data-pagefind-body="">
+		
+			<h1 id="css">CSS</h1>
+		
+		<p>There are five CSS files used to style the website:</p>
+<ul>
+<li><code>__reset.css</code>: Sets default values.</li>
+<li><code>_root.css</code>: Sets the default appearence of HTML elements, and defines CSS variables.</li>
+<li><code>_styles.css</code>: Defines the structure of the website.</li>
+<li><code>markdown.css</code>: For specific bits of HTML created by the markdown processor.</li>
+<li><code>pagefind.css</code>: Styles the search engine.</li>
+</ul>
+<h2 id="basic-customization" tabindex="-1"><a class="header-anchor" href="#basic-customization">Basic Customization</a></h2>
+<p>For minimal changes (such as colors and fonts), changes should be reserved to <code>_root.css</code>, specifically these lines in <code>:root</code>:</p>
+<pre><code class="language-css">--font-title: &quot;Manrope&quot;, &quot;Poppins&quot;, &quot;Open Sans&quot;, sans-serif;
+--font-normal: &quot;Manrope&quot;, &quot;Poppins&quot;, &quot;Open Sans&quot;, sans-serif;
+--font-mono: &quot;monospace&quot;;
+
+--color-bg-html: rgb(0, 0, 0);
+--color-bg: rgb(10, 9, 9);
+--color-bg-border: rgba(32, 32, 32, 1);
+--color-bg-border-accent: rgba(56, 56, 56, 1);
+--color-bg-code: rgba(27, 27, 27, 1);
+--color-bg-accent: rgb(142, 231, 241);
+--color-text-primary: rgb(240, 240, 240);
+--color-text-secondary:rgb(132, 166, 167);
+--color-text-accent: rgb(100, 123, 200);
+--color-image-monochrome-accent: rgba(200, 0, 250, 0.5);
+</code></pre>
+<h3 id="importing-fonts" tabindex="-1"><a class="header-anchor" href="#importing-fonts">Importing Fonts</a></h3>
+<p>Fonts can be imported via HTML or CSS.</p>
+<p>If using HTML, modify the file <code>_includes/layouts/_base.njk</code>, and add the necessary code to the <code>&lt;head&gt;</code> tag.</p>
+<p>If using CSS, you can add your import code in a similar way to the template:</p>
+<pre><code class="language-css">@font-face {
+	font-family: &quot;Manrope&quot;;
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</code></pre>
+
+	</main>
+
+	
+	<div class="siteContainer__right">
+	</div>
+</div>
+</div>
+		<div class="halftone"></div>
+	</body>
+</html>

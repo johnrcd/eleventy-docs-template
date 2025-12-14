@@ -1,0 +1,124 @@
+.siteContainer {
+	display: flex;
+	flex-direction: row;
+	max-width: 960px;
+	margin: 2rem auto;
+	gap: 1rem;
+}
+
+	.siteContainer__left {
+		width: 12rem;
+		max-width: 12rem;
+		display: flex;
+		flex-direction: column;
+		gap: var(--panel-gap);
+
+		position: sticky;
+		top: 0;
+	}
+
+	.sideContainer__sticky {
+		position: sticky;
+		/* --panel-extrude makes the gaps between panels look smaller, */
+		/* so we need to compensate for it for the top-most and left-most panels */
+		top: calc(var(--panel-gap) - var(--panel-extrude));
+		display: flex;
+		flex-direction: column;
+		gap: var(--panel-gap);
+	}
+
+	.siteContainer__main {
+		flex: 1;
+		line-height: 1.5;
+	}
+		.siteContainer__main h1 {
+			display: block;
+			font-size: 2.5rem;
+			text-decoration: none;
+			padding-bottom: 0.5rem;
+			border-bottom: var(--underline-width-title) solid var(--color-text-secondary);
+			line-height: 1;
+		}
+
+		.siteContainer__main h2 > a {
+			display: block;
+			font-size: 1.75rem;
+			text-decoration: none;
+			border-bottom: var(--underline-width) solid var(--color-text-secondary);
+		}
+
+		.siteContainer__main h3 > a {
+			display: inline-block;
+			font-size: 1rem;
+			text-decoration: none;
+			border-bottom: var(--underline-width) solid var(--color-text-secondary);
+		}
+
+.panel {
+	background: var(--color-bg);
+	border: var(--panel-border) solid var(--color-bg-border);
+	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
+	padding: 1rem;
+}
+
+.panel > *:first-child {
+	margin-top: 0;
+}
+
+.siteCard {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	border: var(--panel-border) solid var(--color-bg-border);
+	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
+	padding: 1rem;
+}
+	.siteCard__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-align: center;
+		display: block;
+		text-decoration: none;
+		border-top: var(--panel-border) solid var(--color-bg-border);
+		margin-top: 0.5rem;
+		padding-top: 0.5rem;
+	}
+
+	.siteCard__img {}
+
+.searchButton {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+
+.sideLinks {}
+	.sideLinks__sectionName {
+		font-weight: 700;
+		display: block;
+		border-bottom: var(--underline-width) solid var(--color-text-secondary);
+		margin: 0;
+		padding-bottom: 0.5rem;
+	}
+	.sideLinks__ul {
+		list-style-type: none;
+		padding-left: 0;
+		padding-top: 0.5rem;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+	.sideLinks__ul:last-child {
+		margin-bottom: 0;
+	}
+	.sideLinks__li {}
+	.sideLinks__a {
+		text-decoration: none;
+		line-height: 1.25;
+	}
+
+	.sideLinks__a:hover::before,
+	.sideLinks__a:focus::before {
+		content: "> ";
+	}
+

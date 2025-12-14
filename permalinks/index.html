@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			
+					Permalinks | name of site
+			
+		</title>
+		<meta name="description" content="Project template for a static site built with Eleventy.">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/public/img/favicon/site.webmanifest">
+
+		
+
+		
+
+		<link rel="stylesheet" href="/dist/0kQsw5EZpU.css">
+		
+	</head>
+	<body>
+		<div>
+
+<div class="siteContainer">
+
+	
+	<div class="siteContainer__left">
+
+		
+		<div class="siteCard">
+			<img class="siteCard__logo" src="/public/img/site_logo.png">
+			<a class="siteCard__title" href="/">name of site</a>
+		</div>
+
+		<div class="sideContainer__sticky">
+			
+			<div class="panel">
+				<a class="searchButton" href="/search/">search for page ⌕</a>
+			</div>
+
+			
+			<aside class="panel sideLinks">
+				
+					<p class="sideLinks__sectionName">configure</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-card/">
+								site name/logo
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/css/">
+								appearance
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/permalinks/">
+								links
+							</a>
+						</li>
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/search-customization/">
+								searching
+							</a>
+						</li>
+						
+					</ul>
+				
+					<p class="sideLinks__sectionName">extra</p>
+					<ul class="sideLinks__ul">
+						
+						<li class="sideLinks__li">
+							<a class="sideLinks__a" href="/site-info/">
+								site info
+							</a>
+						</li>
+						
+					</ul>
+				
+			</aside>
+		</div>
+	</div>
+
+	
+	<main class="siteContainer__main panel" data-pagefind-body="">
+		
+			<h1 id="permalinks">Permalinks</h1>
+		
+		<p>By default, all links have their own directory, named based on the title of the page. URLs have a limited set of characters they can use, so they'll be transformed to not break in a process known as <em>slugifying</em>: all text becomes lowercase, and spaces are replaced with dashes (-). If you have emojis, other less common symbols, or any characters that URL's use to define parts of the link (slashes and dots), they will be omitted.</p>
+<ul>
+<li>&quot;Hello World&quot; &gt; <a href="/hello-world/">www.example.com/hello-world/</a></li>
+<li>&quot;lowercase UPPERCASE title&quot; &gt; <a href="/lowercase-uppercase-title/">www.example.com/lowercase-uppercase-title/</a></li>
+<li>😀happy PAGE!!!🤗 &gt; <a href="/happy-page/">www.example.com/happy-page/</a></li>
+</ul>
+<p>The exception is the home page, which is simply stored at the root:</p>
+<p><a href="/">www.example.com</a></p>
+<p>This setup keeps links short, and adds a trailing slash at the end.</p>
+<p>Feel free to organize them as you wish in the <code>content</code> directory. Eleventy is set up in a way that allows data to cascade. In this example, this means that the file that modifies all links to be written in this format:</p>
+<p><code>content/content.11tydata.yaml</code></p>
+<p>Applies to the root folder:</p>
+<p><code>content/</code></p>
+<p>But also to any sub directory, including the one that this page is written in:</p>
+<p><code>content/docs/customization/permalinks.md</code></p>
+<h2 id="remove-trailing-slash" tabindex="-1"><a class="header-anchor" href="#remove-trailing-slash">Remove Trailing Slash</a></h2>
+<p>In <code>content/content.11tydata.yaml</code>, change the line:</p>
+<p><code>permalink: &quot;/permalinks/&quot;</code></p>
+<p>to:</p>
+<p><code>permalink: &quot;/permalinks&quot;</code></p>
+<p>and add this line under it (or anywhere in the file):</p>
+<p><code>eleventyAllowMissingExtension: true</code></p>
+<p>If you're using the template as is (apart from this change), the file should now look like this:</p>
+<pre><code class="language-yaml">layout: &quot;layouts/main.njk&quot;
+permalink: &quot;/permalinks&quot;
+eleventyAllowMissingExtension: true
+</code></pre>
+<p>When swapping between adding the trailing slash and removing them, you will need to delete the build folder (<code>_site</code>) if it already exists, as Eleventy will generate errors.</p>
+<p>Note that Eleventy recommends trailing slashes, and does not recommend removing them. See <a href="https://www.11ty.dev/docs/permalinks/#trailing-slashes">the docs</a> for more information.</p>
+<h2 id="add-sub-folders%2Fdirectories" tabindex="-1"><a class="header-anchor" href="#add-sub-folders%2Fdirectories">Add Sub Folders/Directories</a></h2>
+<p>If you'd prefer that some of your pages share a folder and not sit directly in the root folder, you will need to create an <code>11tydata</code> file in the directory that you want to make changes.</p>
+<p>For an example, you can use <code>content/docs/docs.11tydata.yaml</code>. The file has a single line, commented out. Uncomment it.</p>
+<p>The file should look like this:</p>
+<pre><code class="language-yaml">permalink: &quot;/docs/permalinks/&quot;
+</code></pre>
+<p>Keep in mind that the majority of links in the website are manually written, not calculated. This means that any link to the pages inside the <code>docs/</code> folder will now be wrong, as the links have changed. It is recommended to define a link structure <em>before</em> your add content to your website, or to simply stick with the default setup with no sub folders in the first place.</p>
+<h2 id="reserved-names%2Ffolders" tabindex="-1"><a class="header-anchor" href="#reserved-names%2Ffolders">Reserved Names/Folders</a></h2>
+<p>These names/strings should not be used as a title, as it will clash with existing files used by the website. Note that this includes any variations that will be slugified to the same value (i.e. &quot;test&quot; is equal to &quot;TEST&quot;, which is equal to &quot;😃tEsT😃&quot;)</p>
+<ul>
+<li>pagefind - Generated by the search engine.</li>
+<li>dist - Generated by Eleventy for generated static files.</li>
+<li>public - Used by the <code>public/</code> folder.</li>
+<li>tags - Used by the template to create tag pages.</li>
+</ul>
+
+	</main>
+
+	
+	<div class="siteContainer__right">
+	</div>
+</div>
+</div>
+		<div class="halftone"></div>
+	</body>
+</html>
