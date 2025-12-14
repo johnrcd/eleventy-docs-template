@@ -1,6 +1,10 @@
 # eleventy-docs-template
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb98696b-b515-40ba-bfd3-e3ca49eeecc7/deploy-status)](https://app.netlify.com/projects/eleventy-docs-template/deploys)
+
 This repository is a template for building websites for documentation. It uses [Eleventy](https://www.11ty.dev/) as a static site generator.
+
+You can check out the project at [eleventy-docs-template.netlify.app/](https://eleventy-docs-template.netlify.app/)
 
 ## Features
 
