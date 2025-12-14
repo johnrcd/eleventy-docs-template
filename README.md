@@ -6,5 +6,7 @@ Note that this template was designed around my own use cases, and may be more op
 
 ## Features
 
-- All documentation-related pages stored in `/docs/`
+- All documentation-related pages stored in `/content/docs/`
+- Majority of links
+
 

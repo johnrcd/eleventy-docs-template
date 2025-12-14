@@ -2,16 +2,17 @@
 title: CSS
 ---
 
-There are four CSS files used to style the website:
+There are five CSS files used to style the website:
 
 - `__reset.css`: Sets default values.
 - `_root.css`: Sets the default appearence of HTML elements, and defines CSS variables.
-- `styles.css`: Defines the structure of the website.
+- `_styles.css`: Defines the structure of the website.
+- `markdown.css`: For specific bits of HTML created by the markdown processor.
 - `pagefind.css`: Styles the search engine.
 
 ## Basic Customization
 
-For minimal changes (such as colors and fonts), changes should be reserved to `_root.css`, specifically these lines:
+For minimal changes (such as colors and fonts), changes should be reserved to `_root.css`, specifically these lines in `:root`:
 
 ```css
 --font-title: "Manrope", "Poppins", "Open Sans", sans-serif;
@@ -38,9 +39,9 @@ If using HTML, modify the file `_includes/layouts/_base.njk`, and add the necess
 
 If using CSS, you can add your import code in a similar way to the template:
 
-```
+```css
 @font-face {
-	font-family: 'Manrope';
+	font-family: "Manrope";
 	font-style: normal;
 	font-weight: 200 800;
 	font-display: swap;

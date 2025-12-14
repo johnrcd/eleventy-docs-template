@@ -1,14 +1,17 @@
 side_links:
   - name: configure
     links:
+      - text: site name/logo
+        url: /site-card/
+
+      - text: appearance
+        url: /css/
+
       - text: links
         url: /permalinks/
 
       - text: searching
         url: /search-customization/
-
-      - text: site appearance
-        url: /css/
 
   - name: extra
     links:

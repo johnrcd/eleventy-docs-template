@@ -65,7 +65,7 @@
 	margin-top: 0;
 }
 
-.logo {
+.siteCard {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -74,7 +74,7 @@
 	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
 	padding: 1rem;
 }
-	.logo__title {
+	.siteCard__title {
 		font-size: 1.25rem;
 		font-weight: 700;
 		text-align: center;
@@ -85,7 +85,7 @@
 		padding-top: 0.5rem;
 	}
 
-	.logo__img {}
+	.siteCard__img {}
 
 .searchButton {
 	text-decoration: none;

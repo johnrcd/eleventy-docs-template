@@ -2,6 +2,7 @@ import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItAdmon from "markdown-it-admon";
 import YAML from "yaml";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -38,10 +39,11 @@ export default async function (eleventyConfig) {
 
 	const markdownLib = markdownIt(markdownItOptions).use(
 		markdownItAnchor,
-		markdownItAnchorOptions
+		markdownItAnchorOptions,
 	);
 
 	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAdmon));
 
 	// filters
 

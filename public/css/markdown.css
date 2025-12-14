@@ -1,0 +1,21 @@
+.admonition {
+	border: var(--panel-border) dotted var(--color-bg-border-accent);
+	padding: 1rem;
+}
+
+.admonition-title {
+	font-weight: 700;
+	border-bottom: var(--underline-width-title) solid var(--color-text-secondary);
+	line-height: 1;
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 0.5rem;
+	width: fit-content;
+	text-transform: uppercase;
+}
+
+.admonition > *:not(.admonition-title) {
+	padding: 0;
+	margin: 0;
+}
