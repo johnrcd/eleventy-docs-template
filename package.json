@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --quiet",
 		"index": "npx -y pagefind --site _site",
-		"build": "ELEVENTY_PRODUCTION=true run-s clean build:*",
+		"build": "build:*",
 		"build:11ty": "eleventy",
 		"build:index": "npx -y pagefind --site dist"
 	},
