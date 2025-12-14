@@ -42,6 +42,8 @@ side_links:
     links:
       - text: site themes
         url: /themes/
+      - text: site info
+        url: /site-info/
 
 projects:
   main:

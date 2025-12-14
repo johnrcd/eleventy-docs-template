@@ -12,10 +12,6 @@
 	--font-normal: "Manrope", "Poppins", "Open Sans", sans-serif;
 	--font-mono: "monospace";
 
-	--dot-bg: black;
-	--dot-color:rgba(119, 119, 119, 1);
-	--dot-size: 2px;
-	--dot-space: 22px;
 	--color-bg-html: rgb(0, 0, 0);
 	--color-bg: rgb(10, 9, 9);
 	--color-bg-border: rgba(32, 32, 32, 1);
@@ -26,6 +22,9 @@
 	--color-text-secondary:rgb(132, 166, 167);
 	--color-text-accent: rgb(100, 123, 200);
 	--color-image-monochrome-accent: rgba(200, 0, 250, 0.5);
+
+	--panel-border: 2px;
+	--panel-extrude: 4px;
 
 	/* text highlighting colors */
 	--color-highlight-text:rgb(10, 9, 9);
