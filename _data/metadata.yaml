@@ -1,8 +1,8 @@
-site_name: rovi docs
+site_name: name of site
 logo_path: /public/img/site_logo.png
 url: "https://example.com/"
 language: en
-description: Project Template for a static site built with Eleventy and Paper CMS.
+description: Project template for a static site built with Eleventy.
 author:
   name: Rovi Decena
   email: johnrcd.ar@gmail.com

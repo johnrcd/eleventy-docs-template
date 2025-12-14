@@ -14,33 +14,38 @@ layout: layouts/_base.njk
 			<a class="logo__title" href="/">{{ metadata.site_name }}</a>
 		</div>
 
-		{# MIDDLE LEFT: SEARCH BAR #}
-		<div class="panel">
-			<a class="searchButton" href="/search/">search for page ⌕</a>
-		</div>
+		<div class="sideContainer__sticky">
+			{# MIDDLE LEFT: SEARCH BAR #}
+			<div class="panel">
+				<a class="searchButton" href="/search/">search for page ⌕</a>
+			</div>
 
-		{# REST OF LEFT: LINKS #}
-		<aside class="panel sideLinks">
-			{% for section in site_data.side_links %}
-				<p class="sideLinks__sectionName">{{ section.name }}</p>
-				<ul class="sideLinks__ul">
-					{% for link in section.links %}
-					<li class="sideLinks__li">
-						<a
-							class="sideLinks__a"
-							href="{{ link.url }}"
-						>
-							{{ link.text }}
-						</a>
-					</li>
-					{% endfor %}
-				</ul>
-			{% endfor %}
-		</aside>
+			{# REST OF LEFT: LINKS #}
+			<aside class="panel sideLinks">
+				{% for section in site_data.side_links %}
+					<p class="sideLinks__sectionName">{{ section.name }}</p>
+					<ul class="sideLinks__ul">
+						{% for link in section.links %}
+						<li class="sideLinks__li">
+							<a
+								class="sideLinks__a"
+								href="{{ link.url }}"
+							>
+								{{ link.text }}
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+			</aside>
+		</div>
 	</div>
 
 	{# MIDDLE COLUMN: CONTENT #}
 	<main class="siteContainer__main panel" data-pagefind-body>
+		{% if hideTitle %} {% else %}
+			<h1>{{ title }}</h1>
+		{% endif %}
 		{{ content | safe }}
 	</main>
 

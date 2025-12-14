@@ -16,7 +16,7 @@
 	--color-bg: rgb(10, 9, 9);
 	--color-bg-border: rgba(32, 32, 32, 1);
 	--color-bg-border-accent: rgba(56, 56, 56, 1);
-	--color-bg-content:
+	--color-bg-code: rgba(27, 27, 27, 1);
 	--color-bg-accent: rgb(142, 231, 241);
 	--color-text-primary: rgb(240, 240, 240);
 	--color-text-secondary:rgb(132, 166, 167);
@@ -25,6 +25,7 @@
 
 	--panel-border: 2px;
 	--panel-extrude: 4px;
+	--panel-gap: 1rem;
 
 	/* text highlighting colors */
 	--color-highlight-text:rgb(10, 9, 9);
@@ -67,6 +68,21 @@ h1, h2, h3, h4, h5, h6, p, li, a, input, textarea, div, select, article, main {
 
 h1 {
 	margin-top: 0;
+}
+
+p > code {
+	background: var(--color-bg-code);
+	margin: 0 0.125rem;
+	padding: 0 0.125rem;
+}
+
+pre {
+	/* background: var(--color-bg-code); */
+	border: var(--panel-border) dotted var(--color-bg-border-accent);
+	padding: 1rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	tab-size: 2;
 }
 
 a:hover {

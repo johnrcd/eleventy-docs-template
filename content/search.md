@@ -2,8 +2,6 @@
 title: search
 ---
 
-# search
-
 <!-- <link href="/pagefind/pagefind-ui.css" rel="stylesheet"> -->
 <script src="/pagefind/pagefind-ui.js"></script>
 <div id="pagefind-ui__search"></div>

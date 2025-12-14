@@ -4,14 +4,14 @@
 } */
 
 .pagefind-ui__search-input {
-	background: var(--color-bg-accent);
+	background: var(--color-bg);
 	border: var(--panel-border) solid var(--color-bg-border);
 	padding: 0.25rem;
 	flex-grow: 1;
 }
 
 .pagefind-ui__search-clear {
-	background: var(--color-bg-accent);
+	background: var(--color-bg);
 	border: var(--panel-border) solid var(--color-bg-border);
 	padding: 0.25rem;
 	flex: 0;

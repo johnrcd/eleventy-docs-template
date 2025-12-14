@@ -2,8 +2,6 @@
 title: Site Info
 ---
 
-# Site Information
-
 This site was created with [Eleventy](https://www.11ty.dev/), a static site generator, using the [eleventy-docs-template](https://github.com/johnrcd/eleventy_docs_template). If you're interested in creating a website for documenting something (and you're comfortable with programming), feel free to check it out!
 
 Assuming nothing has changed from the template...

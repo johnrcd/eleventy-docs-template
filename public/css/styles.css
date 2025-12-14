@@ -11,18 +11,33 @@
 		max-width: 12rem;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: var(--panel-gap);
+
+		position: sticky;
+		top: 0;
+	}
+
+	.sideContainer__sticky {
+		position: sticky;
+		/* --panel-extrude makes the gaps between panels look smaller, */
+		/* so we need to compensate for it for the top-most and left-most panels */
+		top: calc(var(--panel-gap) - var(--panel-extrude));
+		display: flex;
+		flex-direction: column;
+		gap: var(--panel-gap);
 	}
 
 	.siteContainer__main {
 		flex: 1;
 		line-height: 1.5;
 	}
-		.siteContainer__main h1 > a {
+		.siteContainer__main h1 {
 			display: block;
 			font-size: 2.5rem;
 			text-decoration: none;
+			padding-bottom: 0.5rem;
 			border-bottom: var(--underline-width-title) solid var(--color-text-secondary);
+			line-height: 1;
 		}
 
 		.siteContainer__main h2 > a {
@@ -99,6 +114,7 @@
 	.sideLinks__li {}
 	.sideLinks__a {
 		text-decoration: none;
+		line-height: 1.25;
 	}
 
 	.sideLinks__a:hover::before,
