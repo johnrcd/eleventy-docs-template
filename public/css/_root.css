@@ -17,11 +17,11 @@
 	--color-bg-border: rgba(32, 32, 32, 1);
 	--color-bg-border-accent: rgba(56, 56, 56, 1);
 	--color-bg-code: rgba(27, 27, 27, 1);
-	--color-bg-accent: rgb(142, 231, 241);
+	--color-bg-accent: rgba(30, 30, 35, 1);
 	--color-text-primary: rgb(240, 240, 240);
 	--color-text-secondary:rgb(132, 166, 167);
 	--color-text-accent: rgb(100, 123, 200);
-	--color-image-monochrome-accent: rgba(200, 0, 250, 0.5);
+	--color-image-monochrome-accent: rgba(7, 7, 7, 0.5);
 
 	--panel-border: 2px;
 	--panel-extrude: 4px;
@@ -74,6 +74,10 @@ p > code {
 	background: var(--color-bg-code);
 	margin: 0 0.125rem;
 	padding: 0 0.125rem;
+}
+
+p:empty {
+	display: none;
 }
 
 pre {

@@ -1,0 +1,22 @@
+{# Generates a list with links to pages.                                    #}
+
+{# The pages that are shown on the list are determined by the variable      #}
+{# "pages_list". When including this nunjucks file, ensure that pages_list  #}
+{# is defined beforehand.                                                   #}
+
+<ol reversed class="pages">
+	{%- for page in pages_list | reverse %}
+		<li class="pages__li">
+			<a
+				class="pages__a"
+				href="{{ page.url }}"
+			>
+				{% if page.data.title %}
+					{{ page.data.title }}
+				{% else %}
+					Untitled
+				{% endif %}
+			</a>
+		</li>
+	{%- endfor %}
+</ol>

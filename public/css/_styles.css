@@ -122,3 +122,41 @@
 		content: "> ";
 	}
 
+/* ---------- */
+/* PAGE LISTS */
+/* ---------- */
+
+.tilePageList {
+	list-style-type: none;
+	padding: 0;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	margin-bottom: 2em;
+	text-align: center;
+	gap: 1rem;
+}
+
+.labelledTile {
+	/* max-width: 8rem; */
+	border: var(--panel-border) solid var(--color-bg-border-accent);
+	background: var(--color-bg);
+	padding: 0.5rem;
+	line-height: 0;
+	display: block;
+	text-decoration: none;
+}
+
+.labelledTile:hover {
+	background: var(--color-bg-accent);
+}
+
+	.labelledTile__text {
+		display: block;
+		padding: 0.5rem 0.25rem;
+		padding-bottom: 0;
+		margin: 0;
+		text-align: center;
+		line-height: 1;
+		text-decoration: none;
+	}

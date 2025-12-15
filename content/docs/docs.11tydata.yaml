@@ -1,1 +1,2 @@
-# permalink: "/docs/{{ title | slugify }}/"
+tags:
+  - docs
