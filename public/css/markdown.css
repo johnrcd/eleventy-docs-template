@@ -19,3 +19,44 @@
 	padding: 0;
 	margin: 0;
 }
+
+/* https://moderncss.dev/pure-css-custom-checkbox-style/ */
+.contains-task-list {
+	list-style-type: none;
+	padding: 0;
+	padding-left: 1rem;
+}
+
+.task-list-item-checkbox {
+	appearance: none;
+}
+
+.task-list-item-checkbox::before {
+	content:"☐";
+	padding-right: 0.25rem;
+}
+
+.task-list-item-checkbox:checked::before {
+	content:"☑";
+	padding-right: 0.25rem;
+}
+
+.markdown-alert {
+	--alert-color: var(--color-text-secondary);
+	border: 1px dotted var(--alert-color);
+	border-left: 4px solid var(--alert-color);
+	margin: 1rem 0;
+	padding: 0 1rem;
+}
+
+.markdown-alert-note      { --alert-color: #0FF9; }
+.markdown-alert-tip       { --alert-color: #FF09; }
+.markdown-alert-important { --alert-color: #F3F9; }
+.markdown-alert-warning   { --alert-color: #F809; }
+.markdown-alert-caution   { --alert-color: #F229; }
+
+.markdown-alert-title > svg {
+	fill: var(--alert-color);
+	margin-right: 0.5rem;
+	transform: translateY(0.125rem);
+}

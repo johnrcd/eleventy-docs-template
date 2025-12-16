@@ -3,6 +3,10 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItAdmon from "markdown-it-admon";
+import markdownItContainer from "markdown-it-container";
+import markdownItTaskLists from "markdown-it-task-lists";
+import markdownItGitHubAlerts from "markdown-it-github-alerts";
+import { full as emoji } from 'markdown-it-emoji'
 import YAML from "yaml";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -29,21 +33,21 @@ export default async function (eleventyConfig) {
 
 	// markdown parser
 
-	const markdownItOptions = {
-		html: true,
-	};
+	const markdownLib = markdownIt({
+		html: true
+	});
 
-	const markdownItAnchorOptions = {
-		permalink: markdownItAnchor.permalink.headerLink()
-	};
-
-	const markdownLib = markdownIt(markdownItOptions).use(
-		markdownItAnchor,
-		markdownItAnchorOptions,
-	);
-
+	markdownLib
+		.use(emoji)
+		.use(markdownItTaskLists, { label: true })
+		.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.headerLink(),
+		})
+		.use(markdownItContainer, "example", {})
+		.use(markdownItAdmon, {})
+		.use(markdownItGitHubAlerts, {})
+		;
 	eleventyConfig.setLibrary("md", markdownLib);
-	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAdmon));
 
 	// filters
 

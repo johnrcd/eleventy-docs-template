@@ -13,6 +13,11 @@ side_links:
       - text: searching
         url: /search-customization/
 
+  - name: tutorials
+    links:
+      - text: markdown
+        url: /markdown-reference/
+
   - name: extra
     links:
       - text: site info

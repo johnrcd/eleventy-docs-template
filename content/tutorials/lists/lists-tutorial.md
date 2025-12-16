@@ -33,3 +33,35 @@ The example below shows an of a card-style page list for a collection of selecta
 	- Configuration of files.
 
 ## Icon
+
+::: test
+*here be dragons*
+:::
+
+<span style="column-count: 3;">
+- one
+- two
+- three
+- four
+- i
+- declare
+- a
+- thumb
+- war
+</span>
+<ul style="column-count: 3;">
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li>
+	<li>meow</li><li>meow</li>
+	<li>meow</li>
+</ul>

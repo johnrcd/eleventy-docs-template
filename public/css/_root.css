@@ -93,6 +93,11 @@ a:hover {
 	color: var(--color-text-accent);
 }
 
+ul li p,
+ol li p {
+	margin: 0;
+}
+
 img {
 	max-width: 100%;
 }
