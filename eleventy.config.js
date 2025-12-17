@@ -44,6 +44,11 @@ export default async function (eleventyConfig) {
 			permalink: markdownItAnchor.permalink.headerLink(),
 		})
 		.use(markdownItContainer, "example", {})
+		.use(markdownItContainer, "scaleUpImage", {})
+		.use(markdownItContainer, "multiColumnList", {})
+		.use(markdownItContainer, "multiColumnList--2", {})
+		.use(markdownItContainer, "multiColumnList--3", {})
+		.use(markdownItContainer, "multiColumnList--4", {})
 		.use(markdownItAdmon, {})
 		.use(markdownItGitHubAlerts, {})
 		;

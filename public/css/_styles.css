@@ -1,9 +1,23 @@
+/* NOTES: */
+/* All media queries are designed around the left side container being a    */
+/* fixed size (12rem). If you want to change it, you should change the      */
+/* media queries to match.                                                  */
+
+/* why do i have both body and .siteContainer???? */
+
 .siteContainer {
 	display: flex;
 	flex-direction: row;
-	max-width: 960px;
+	justify-content: center;
+	max-width: 100dvw;
 	margin: 2rem auto;
 	gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+	.siteContainer {
+		display: block;
+		margin: 0;
+	}
 }
 
 	.siteContainer__left {
@@ -12,9 +26,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--panel-gap);
+	}
 
-		position: sticky;
-		top: 0;
+	@media screen and (max-width: 768px) {
+		.siteContainer__left {
+			flex-direction: row;
+			width: 100%;
+			max-width: 100dvw;
+			justify-content: space-between;
+			align-items: center;
+			padding: var(--panel-padding);
+		}
 	}
 
 	.sideContainer__sticky {
@@ -30,6 +52,10 @@
 	.siteContainer__main {
 		flex: 1;
 		line-height: 1.5;
+		/* min-width: min(fit-content, var(--content-width)); */
+		width: var(--content-width);
+		--real-width: calc(100dvw - calc(var(--panel-padding) * 2));
+		max-width: min(var(--real-width), var(--content-width));
 	}
 		.siteContainer__main h1 {
 			display: block;
@@ -38,6 +64,7 @@
 			padding-bottom: 0.5rem;
 			border-bottom: var(--underline-width-title) solid var(--color-text-secondary);
 			line-height: 1;
+			min-width: 100%;
 		}
 
 		.siteContainer__main h2 > a {
@@ -58,7 +85,14 @@
 	background: var(--color-bg);
 	border: var(--panel-border) solid var(--color-bg-border);
 	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
-	padding: 1rem;
+	padding: var(--panel-padding);
+}
+
+@media screen and (max-width: 768px) {
+	.panel {
+		box-shadow: none;
+		border: none;
+	}
 }
 
 .panel > *:first-child {
@@ -74,6 +108,15 @@
 	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
 	padding: 1rem;
 }
+@media screen and (max-width: 768px) {
+	.siteCard {
+		flex-direction: row;
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+}
 	.siteCard__title {
 		font-size: 1.25rem;
 		font-weight: 700;
@@ -85,7 +128,24 @@
 		padding-top: 0.5rem;
 	}
 
-	.siteCard__img {}
+	@media screen and (max-width: 768px) {
+		.siteCard__title {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			/* idk what i'm doing */
+			line-height: 1.5;
+		}
+	}
+
+	.siteCard__logo {}
+
+	@media screen and (max-width: 768px) {
+		.siteCard__logo {
+			height: 2rem;
+			max-height: 2rem;
+		}
+	}
 
 .searchButton {
 	text-decoration: none;
@@ -93,7 +153,30 @@
 	display: block;
 }
 
+	@media screen and (max-width: 768px) {
+		.panel:has(.searchButton) {
+			display: block;
+			margin: 0;
+			padding: 0;
+			background: none;
+			border: none;
+			box-shadow: none;
+			height: 100%;
+		}
+
+		.searchButton {
+			height: 100%;
+			/* i don't know what this does but it helps align */
+			line-height: 0;
+		}
+	}
+
 .sideLinks {}
+@media screen and (max-width: 768px) {
+	.sideLinks {
+		display: none;
+	}
+}
 	.sideLinks__sectionName {
 		font-weight: 700;
 		display: block;
@@ -134,7 +217,7 @@
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	margin-bottom: 2em;
 	text-align: center;
-	gap: 1rem;
+	gap: var(--panel-padding);
 }
 
 .labelledTile {

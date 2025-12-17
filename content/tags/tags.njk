@@ -5,7 +5,7 @@ title: List of All Tags
 
 <ul>
 	{% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
-		{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		{% set tagUrl %}/tag/{{ tag | slugify }}/{% endset %}
 		<li><a href="{{ tagUrl }}" class="page-tag">{{ tag }}</a></li>
 	{% endfor %}
 </ul>

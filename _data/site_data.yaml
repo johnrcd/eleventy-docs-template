@@ -18,10 +18,15 @@ side_links:
       - text: markdown
         url: /markdown-reference/
 
+      - text: components
+        url: /components/
+
   - name: extra
     links:
       - text: site info
         url: /site-info/
+      - text: tags
+        url: /tags/
 
 page_collections:
   chars:

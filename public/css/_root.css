@@ -8,12 +8,13 @@
 }
 
 :root{
-	--font-title: "Manrope", "Poppins", "Open Sans", sans-serif;
-	--font-normal: "Manrope", "Poppins", "Open Sans", sans-serif;
+	--font-title: "Google Sans", sans-serif;
+	--font-normal: "Google Sans", sans-serif;
 	--font-mono: "monospace";
 
 	--color-bg-html: rgb(0, 0, 0);
 	--color-bg: rgb(10, 9, 9);
+	--color-bg-200: rgba(20, 19, 19, 1);
 	--color-bg-border: rgba(32, 32, 32, 1);
 	--color-bg-border-accent: rgba(56, 56, 56, 1);
 	--color-bg-code: rgba(27, 27, 27, 1);
@@ -26,6 +27,9 @@
 	--panel-border: 2px;
 	--panel-extrude: 4px;
 	--panel-gap: 1rem;
+	--panel-padding: 1rem;
+
+	--content-width: 50rem;
 
 	/* text highlighting colors */
 	--color-highlight-text:rgb(10, 9, 9);
@@ -33,6 +37,12 @@
 
 	--underline-width-title: 4px;
 	--underline-width: 2px;
+
+	--color-github-alert-note      : #0FF9;
+	--color-github-alert-tip       : #FF09;
+	--color-github-alert-important : #F3F9;
+	--color-github-alert-warning   : #F809;
+	--color-github-alert-caution   : #F229;
 
 	/* --- */
 
@@ -46,6 +56,12 @@
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--panel-padding: 0.5rem;
+	}
 }
 
 
@@ -74,6 +90,9 @@ p > code {
 	background: var(--color-bg-code);
 	margin: 0 0.125rem;
 	padding: 0 0.125rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	tab-size: 2;
 }
 
 p:empty {
@@ -106,4 +125,41 @@ img {
 	color: var(--color-highlight-text);
 	background: var(--color-highlight-bg);
 }
+
+table {
+	border-collapse: collapse;
+	overflow: hidden;
+	border: var(--underline-width) solid var(--color-text-secondary);
+	padding: var(--underline-width);
+}
+th,
+td {
+	padding: 0.25rem 0.5rem;
+	color: #fff;
+}
+td:nth-child(even) {
+	background: var(--color-bg-200);
+}
+th {
+	text-align: left;
+}
+
+thead th {
+	background-color: var(--color-text-secondary);
+	color: var(--color-bg);
+}
+
+/* tbody td {
+	position: relative;
+} */
+/* tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255, 255, 255, 0.2);
+	z-index: -1;
+} */
 

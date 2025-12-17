@@ -49,14 +49,68 @@
 	padding: 0 1rem;
 }
 
-.markdown-alert-note      { --alert-color: #0FF9; }
-.markdown-alert-tip       { --alert-color: #FF09; }
-.markdown-alert-important { --alert-color: #F3F9; }
-.markdown-alert-warning   { --alert-color: #F809; }
-.markdown-alert-caution   { --alert-color: #F229; }
+.markdown-alert-note      { --alert-color: var(--color-github-alert-note     ); }
+.markdown-alert-tip       { --alert-color: var(--color-github-alert-tip      ); }
+.markdown-alert-important { --alert-color: var(--color-github-alert-important); }
+.markdown-alert-warning   { --alert-color: var(--color-github-alert-warning  ); }
+.markdown-alert-caution   { --alert-color: var(--color-github-alert-caution  ); }
 
 .markdown-alert-title > svg {
 	fill: var(--alert-color);
 	margin-right: 0.5rem;
 	transform: translateY(0.125rem);
 }
+
+/* this code is so bad */
+/* who wrote it!!!!! */
+/* (i did. i wrote this.) */
+
+.multiColumnList--2 { --column-count: 2; }
+.multiColumnList--3 { --column-count: 3; }
+.multiColumnList--4 { --column-count: 4; }
+
+.multiColumnList--2,
+.multiColumnList--3,
+.multiColumnList--4 {
+	/* "var(--panelpadding) * 6" should be "var(--panelpadding) * 2" */
+	/* but a four column list was messing up so i scrapped it */
+	/* probably a TERRIBLE idea but oh well */
+	--effective-width: calc(calc(var(--content-width) - var(--panel-padding) * 6));
+	columns: calc(var(--effective-width) / var(--column-count)) var(--column-count);
+	margin: 1rem 0;
+}
+.multiColumnList--2 > ul,
+.multiColumnList--3 > ul,
+.multiColumnList--4 > ul {
+	margin: 0;
+}
+
+.multiColumnList--2 > ul > li,
+.multiColumnList--3 > ul > li,
+.multiColumnList--4 > ul > li {
+	padding: 0;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.multiColumnList--2 > ul > li a,
+.multiColumnList--3 > ul > li a,
+.multiColumnList--4 > ul > li a {
+	text-decoration: none;
+}
+
+.multiColumnList--2 > ul > li img,
+.multiColumnList--3 > ul > li img,
+.multiColumnList--4 > ul > li img {
+	max-height: 1rem;
+	height: 1rem;
+	image-rendering: pixelated;
+	transform: translateY(0.125rem);
+}
+
+.scaleUpImage img {
+	max-width: 100%;
+	width: 100%;
+	image-rendering: pixelated;
+}
+
