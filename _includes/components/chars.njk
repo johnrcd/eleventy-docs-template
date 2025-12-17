@@ -1,9 +1,0 @@
-<ul class="tilePageList">
-	{% for char in site_data.page_collections.chars %}
-		<li class="tilePageList__element">
-			<a class="labelledTile" href="{{ char.url }}">
-			<img class="labelledTile__img" src="{{ char.img_src }}" />
-			<p class="labelledTile__text">{{ char.name }}</p>
-		</li>
-	{% endfor %}
-</ul>

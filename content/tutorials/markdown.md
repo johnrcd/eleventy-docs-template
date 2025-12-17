@@ -76,8 +76,21 @@ ___This is both italcized and bolded text.___
 
 NOTE: The text above may not appear correctly depending on the font being rendered.
 
-~~crossed out text~~ (requires double ~~)
+### Strikethrough
 
+~~crossed out text~~
+
+```
+~~crossed out text~~
+```
+
+### Superscript and Subscript
+
+H~2~0, 29^th^
+
+```
+H~2~0, 29^th^
+```
 
 ## Lists
 
@@ -131,6 +144,59 @@ There's also checklists.
 | 03      | Lead 2 (Secondary) |
 ```
 
+## Footnotes
+
+A standard footnote has two features; an indentifier, and the content of the footnote.
+
+My favorite color is purple.[^color-or-colour]
+
+[^color-or-colour]: *favourite, *color
+
+```
+My favorite color is purple.[^color-or-colour]
+
+[^color-or-colour]: *favourite, *color
+```
+
+[^footnote-before-reference]: This footnote is written earlier before it's referenced.
+
+Footnotes can even be written before they're called.[^footnote-before-reference]
+
+```
+[^footnote-before-reference]: This footnote is written earlier before it's referenced.
+
+Footnotes can even be written before they're called.[^footnote-before-reference]
+```
+
+(I don't recommend you do this, though.)
+
+### Multi-Line
+
+Footnotes can be written over multiple lines.[^long-note]
+
+[^long-note]: This is the first paragraph.
+
+	This is the second paragraph. I'm intended to signal that I'm a part of the footnote.
+
+```
+Footnotes can be written over multiple lines.[^long-note]
+
+[^long-note]: This is the first paragraph.
+
+	This is the second paragraph. I'm intended to signal that I'm a part of the footnote.
+```
+
+### Inline Notes
+
+Here is an inline note.^[This is the contents of an inline note.]
+
+```
+Here is an inline note.^[This is the contents of an inline note.]
+```
+
+Inline notes are automatically assigned an `id`, and cannot be manually given one.
+
+
 ## Horizontal Line
 
 You can use horizontal lines to separate content, although it isn't recommended.
@@ -175,11 +241,25 @@ The full list of emojis can be found [here](https://gist.github.com/rxaviers/736
 
 In the event that gist gets taken down, you can find the actual source code (less readable) [over here](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.mjs).
 
-In the event that the emoji dictionary file gets moved, you can find the repository [here](https://github.com/markdown-it/markdown-it-emoji/).
+### Emoticons
 
-In the event that the repository gets taken down...
+There's also shortcuts for emoticons to automatically convert to their emoji counterparts.
 
-I don't know. Use a different emoji library?
+:P :") :* </3
+
+```
+:P :") :* </3
+```
+
+The list is shorter, so you can just check out the [source code](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/shortcuts.mjs).
+
+> [!WARNING]
+> Shortcuts may not always render, and using them may cause conflicts depending on the characters being used.
+>
+> <//3
+> ```
+> <//3
+> ```
 
 ## Containers, Admonitions, Callouts, Alerts, etc.
 

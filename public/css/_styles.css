@@ -81,6 +81,10 @@
 			border-bottom: var(--underline-width) solid var(--color-text-secondary);
 		}
 
+		.siteContainer__main > *:last-child {
+			margin-bottom: 0;
+		}
+
 .panel {
 	background: var(--color-bg);
 	border: var(--panel-border) solid var(--color-bg-border);

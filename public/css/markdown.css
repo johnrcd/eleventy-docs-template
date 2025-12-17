@@ -114,3 +114,93 @@
 	image-rendering: pixelated;
 }
 
+.footnotes-sep {
+	/* border-top: var(--panel-border) solid var(--color-bg-border); */
+ display: none;
+}
+
+.footnotes-list {
+	margin-bottom: 0;
+	border-top: var(--panel-border) solid var(--color-text-secondary);
+	padding-top: 1rem;
+}
+
+.footnote-item {
+	margin-bottom: 1rem;
+}
+
+.footnote-item:last-child {
+	margin-bottom: 0;
+}
+
+.cardSelect > ul,
+.cardSelect--labelOverlap > ul,
+.cardSelect--framed > ul {
+	list-style-type: none;
+	padding: 0;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	margin-bottom: 2em;
+	text-align: center;
+	gap: var(--panel-padding);
+}
+
+.cardSelect > ul > li > a,
+.cardSelect--labelOverlap > ul > li > a,
+.cardSelect--framed > ul > li > a {
+	/* max-width: 8rem; */
+	/* border: var(--panel-border) solid var(--color-bg-border-accent); */
+	background: var(--color-bg);
+	/* padding: 0.5rem; */
+	line-height: 0;
+	display: block;
+	text-decoration: none;
+}
+
+.cardSelect > ul > li > a:hover,
+.cardSelect--labelOverlap > ul > li > a:hover,
+.cardSelect--framed > ul > li > a:hover {
+	background: var(--color-bg-accent);
+}
+
+.cardSelect > ul > li > a > img,
+.cardSelect--labelOverlap > ul > li > a > img,
+.cardSelect--framed > ul > li > a > img {
+	width: 100%;
+}
+
+.cardSelect--labelOverlap > ul > li {
+	position: relative;
+}
+
+.cardSelect--labelOverlap > ul > li > p {
+	position: absolute;
+	left: 0;
+	right: 0.25rem;
+	margin-inline: auto;
+	width: calc(100% - 1rem);
+	/* display: block; */
+	bottom: 0.625rem;
+	padding: 0rem 0.5rem;
+	background: var(--color-bg-accent);
+	border: 2px solid var(--color-bg-border);
+	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg);
+	/* padding: var(--panel-padding); */
+	pointer-events: none;
+}
+
+.cardSelect--framed > ul > li {
+	border: var(--panel-border) solid var(--color-bg-border-accent);
+	padding: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.cardSelect--framed > ul > li > p {
+	background: var(--color-bg-accent);
+	padding: 0.125rem 0.5rem;
+}
+
+

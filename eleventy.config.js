@@ -8,6 +8,9 @@ import markdownItTaskLists from "markdown-it-task-lists";
 import markdownItGitHubAlerts from "markdown-it-github-alerts";
 import { full as emoji } from 'markdown-it-emoji'
 import YAML from "yaml";
+import markdownItSub from "markdown-it-sub";
+import markdownItSup from "markdown-it-sup";
+import footnote_plugin from "markdown-it-footnote";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -39,11 +42,17 @@ export default async function (eleventyConfig) {
 
 	markdownLib
 		.use(emoji)
+		.use(markdownItSub)
+		.use(markdownItSup)
+		.use(footnote_plugin)
 		.use(markdownItTaskLists, { label: true })
 		.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.headerLink(),
 		})
 		.use(markdownItContainer, "example", {})
+		.use(markdownItContainer, "cardSelect", {})
+		.use(markdownItContainer, "cardSelect--labelOverlap", {})
+		.use(markdownItContainer, "cardSelect--framed", {})
 		.use(markdownItContainer, "scaleUpImage", {})
 		.use(markdownItContainer, "multiColumnList", {})
 		.use(markdownItContainer, "multiColumnList--2", {})
