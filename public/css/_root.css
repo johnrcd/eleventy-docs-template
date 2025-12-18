@@ -8,6 +8,10 @@
 }
 
 :root{
+	/* lol WAT */
+	/* https://mskelton.dev/bytes/20231006081950 */
+	color-scheme: dark;
+
 	--font-title: "Google Sans", sans-serif;
 	--font-normal: "Google Sans", sans-serif;
 	--font-mono: "monospace";
@@ -103,8 +107,9 @@ pre {
 	/* background: var(--color-bg-code); */
 	border: var(--panel-border) dotted var(--color-bg-border-accent);
 	padding: 1rem;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+	white-space: auto;
+	overflow-x: auto;
+	word-wrap: nowrap;
 	tab-size: 2;
 }
 
