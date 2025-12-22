@@ -44,11 +44,9 @@ Each line represents a card. The format is relatively obtuse, but it can be brok
 2. The link: `[content to display](/caster/)`
 3. The text: `<p>Caster</p>`
 
-Essentially, links in Markdown can use images as their content (the part that's clickable) instead of text. The content in each link is an image of one of the characters. The text is wrapped in an HTML element for styling.
+Essentinally, links can have content in them. This is often text, but it can also be images. For styling purposes, a `<p>` tag is added at the end of the image.
 
-The default card select layout makes labels optional, but it is recommended to include them to make navigation easier.
-
-All of the card select variations are written with the same structure. This is because I like future me (writing documentation) and hate current me (having to write the worst CSS of all time to make it all fit).
+The default card select layout makes labels optional, but it is recommended to include them to make navigation easier. Additionally, the other layouts use them.
 
 ### Overlapping Label
 
@@ -77,6 +75,7 @@ Puts the text overtop.
 - [![](/public/img/chars/char_sentinel.png)](/caster/) <p>Sentinel</p>
 :::
 ```
+
 ### Framed
 
 Puts the label underneath, and gives each card a frame.

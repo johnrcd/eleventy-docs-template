@@ -10,7 +10,8 @@
 	flex-grow: 1;
 }
 
-.pagefind-ui__search-clear {
+.pagefind-ui__search-clear,
+.pagefind-ui__button {
 	background: var(--color-bg);
 	border: var(--panel-border) solid var(--color-bg-border);
 	padding: 0.25rem;

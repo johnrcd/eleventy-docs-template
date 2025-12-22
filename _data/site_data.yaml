@@ -1,6 +1,9 @@
 side_links:
   - name: configure
     links:
+      - text: getting started
+        url: /getting-started/
+
       - text: site name/logo
         url: /site-card/
 
@@ -13,7 +16,7 @@ side_links:
       - text: searching
         url: /search-customization/
 
-  - name: tutorials
+  - name: reference
     links:
       - text: markdown
         url: /markdown-reference/

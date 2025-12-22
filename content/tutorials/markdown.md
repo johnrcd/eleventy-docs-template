@@ -2,36 +2,32 @@
 title: Markdown Reference
 ---
 
-Markdown is the markup language that this template uses to create content with.
-
-Because Markdown is so simple, many Markdown processors extend the language by adding additional features. It is very rare to only ever use the [base syntax of Markdown](https://daringfireball.net/projects/markdown/syntax). This document serves as a reference onto the features that this website supports.
+Markdown is how content is written for this template. This document serves as a reference on the features supported by the Markdown processor.
 
 It is recommended to view this page from the website, as it both shows the lines of code and what they output.
-
-NOTE: If you're planning on updating the Markdown processor, either delete this page or update it.
 
 ## Headings
 
 This is what headings look like:
 
-# Heading 1 (h1)
+# Heading 1
 
 ## Heading 2
 
 ### Heading 3
 
 ```
-# Heading 1 (h1)
+# Heading 1
 
 ## Heading 2
 
 ### Heading 3
 ```
 
-All headings are clickable, to help make it easier to link to sections on a page.
+All Markdown headings are clickable, to help make it easier to link to sections on a page.
 
 > [!IMPORTANT]
-> An `<h1>` tag is automatically created for every page. Because of that, a Heading 1 should not be used.
+> An `<h1>` tag is automatically created for every page, and should not be used. It is only used on this page for demonstratative purposes.
 
 ## Text
 
@@ -74,8 +70,6 @@ __This is also bolded text.__
 
 ___This is both italcized and bolded text.___
 
-NOTE: The text above may not appear correctly depending on the font being rendered.
-
 ### Strikethrough
 
 ~~crossed out text~~
@@ -94,7 +88,7 @@ H~2~0, 29^th^
 
 ## Lists
 
-Markdown by default has lists; unordered and ordered.
+Markdown by default supports both unordered and ordered lists.
 
 ### Unordered
 
@@ -114,11 +108,25 @@ Markdown by default has lists; unordered and ordered.
 2. There is a number/positiong marking beside each item in the list.
 3. Bottom Text.
 
-This is a gap between lists.
+```
+1. This is an ordered list.
+2. There is a number/positiong marking beside each item in the list.
+3. Bottom Text.
+```
+
+<span></span>
 
 15. This is an ordered list with a different starting number.
 16. Ordered lists do not need to start on one.
-200. The numbers on an ordered list (except for the first) do not need to be in a proper order. In Markdown, this list element is given the number "200", but on the site, it should appear to equal "17".
+200. Additionally, the numbers on an ordered list (except for the first) are ignored when parsed.
+300. (This is why the numbers jump from 200 and 300).
+
+```
+15. This is an ordered list with a different starting number.
+16. Ordered lists do not need to start on one.
+200. Additionally, the numbers on an ordered list (except for the first) are ignored when parsed.
+300. (This is why the numbers jump from 200 and 300).
+```
 
 ### Checklist/To Do
 
@@ -127,6 +135,12 @@ There's also checklists.
 - [x] Completed task
 - [ ] Incomplete task
 - [ ] Another task
+
+```
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task
+```
 
 ## Tables
 
@@ -142,6 +156,22 @@ There's also checklists.
 | 01      | Piano/Keyboard     |
 | 02      | Lead 1 (Primary)   |
 | 03      | Lead 2 (Secondary) |
+```
+
+Here's a bigger table with more features
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+```
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 ```
 
 ## Footnotes
