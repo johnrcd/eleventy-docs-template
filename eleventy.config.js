@@ -11,6 +11,9 @@ import YAML from "yaml";
 import markdownItSub from "markdown-it-sub";
 import markdownItSup from "markdown-it-sup";
 import footnote_plugin from "markdown-it-footnote";
+import multimd_table_plugin from "markdown-it-multimd-table";
+import deflist_plugin from "markdown-it-deflist";
+import pluginTOC from "eleventy-plugin-toc";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -33,6 +36,13 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 	eleventyConfig.addPlugin(IdAttributePlugin);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin); // need for 404 page
+	eleventyConfig.addPlugin(pluginTOC, {
+		tags: ["h2", "h3", "h4"],
+		wrapper: "nav",
+		wrapperClass: "tableOfContents",
+		ul: false,
+		flat: false
+	});
 
 	// markdown parser
 
@@ -45,7 +55,10 @@ export default async function (eleventyConfig) {
 		.use(markdownItSub)
 		.use(markdownItSup)
 		.use(footnote_plugin)
+		.use(deflist_plugin)
 		.use(markdownItTaskLists, { label: true })
+		// .use(gridTableRulePlugin)
+		.use(multimd_table_plugin)
 		.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.headerLink(),
 		})

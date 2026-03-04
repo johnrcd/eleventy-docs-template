@@ -226,6 +226,30 @@ Here is an inline note.^[This is the contents of an inline note.]
 
 Inline notes are automatically assigned an `id`, and cannot be manually given one.
 
+## Defintion Lists
+
+Soft of a weird one-- meant for the weird definition list thing that HTML has but is rarely used.
+
+Skirmisher
+~ Aggressive fighters that can jump directly in the fray of a battle. Relatively fragile, but make up for it with their agility and strength.
+
+Brusier
+~ Combatants that can both deal and take a lot of damage.
+
+Marksman
+~ Fights from a distance using bows or long-ranged artillery magic.
+
+```
+Skirmisher
+~ Aggressive fighters that can jump directly in the fray of a battle. Relatively fragile, but make up for it with their agility and strength.
+
+Brusier
+~ Combatants that can both deal and take a lot of damage.
+
+Marksman
+~ Fights from a distance using bows or long-ranged artillery magic.
+```
+
 
 ## Horizontal Line
 
