@@ -2,13 +2,14 @@
 title: Components
 ---
 
+[[toc]]
+
 Generally, you will want to build your own components to add visual interest to your pages. Markdown is excellent for text content, but is not designed to deal with layouts.
 
 This template has several components that you can use as a reference for your own projects. It is recommended to view this directly on the website, as it shows both the code to create a component and what it looks like when the website is running.
 
 > [!TIP]
 > All the style information for these components can be found in `public/css/markdown.css`, if you'd like to make edits to the look and feel of them.
-
 
 ## Card Select
 

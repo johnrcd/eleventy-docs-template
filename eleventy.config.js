@@ -14,6 +14,7 @@ import footnote_plugin from "markdown-it-footnote";
 import multimd_table_plugin from "markdown-it-multimd-table";
 import deflist_plugin from "markdown-it-deflist";
 import pluginTOC from "eleventy-plugin-toc";
+import MarkdownItTOC from 'markdown-it-table-of-contents';
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -73,6 +74,16 @@ export default async function (eleventyConfig) {
 		.use(markdownItContainer, "multiColumnList--4", {})
 		.use(markdownItAdmon, {})
 		.use(markdownItGitHubAlerts, {})
+		.use(MarkdownItTOC, {
+			containerHeaderHtml: "<p class=\"table-of-contents__header\">Table of Contents</p>",
+			includeLevel: [1, 2, 3, 4],
+			transformContainerOpen: () => {
+				return "<details class=\"table-of-contents\" open><summary class=\"table-of-contents__header\">Table of Contents</summary>";
+			},
+			transformContainerClose: () => {
+				return "</details>";
+			}
+		})
 		;
 	eleventyConfig.setLibrary("md", markdownLib);
 

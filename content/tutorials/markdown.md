@@ -6,6 +6,9 @@ Markdown is how content is written for this template. This document serves as a 
 
 It is recommended to view this page from the website, as it both shows the lines of code and what they output.
 
+[[toc]]
+
+
 ## Headings
 
 This is what headings look like:
