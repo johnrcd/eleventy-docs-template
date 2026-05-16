@@ -1,86 +1,119 @@
-/* .pagefind-ui__form {
-	display: flex;
-	gap: 1rem;
-} */
+:root:root {
+	/* --color-bg-html: rgb(0, 0, 0);
+	--color-bg: rgb(10, 9, 9);
+	--color-bg-200: rgba(20, 19, 19, 1);
+	--color-bg-border: rgba(32, 32, 32, 1);
+	--color-bg-border-argb(12, 10, 10) 56, 1);
+	--color-bg-code: rgba(27, 27, 27, 1);
+	--color-bg-accent: rgba(30, 30, 35, 1);
+	--color-text-primary: rgb(240, 240, 240);
+	--color-text-secondary:rgb(132, 166, 167);
+	--color-text-accent: rgb(100, 123, 200);
+	--color-image-monochrome-accent: rgba(7, 7, 7, 0.5); */
 
-.pagefind-ui__search-input {
-	background: var(--color-bg);
-	border: var(--panel-border) solid var(--color-bg-border);
-	padding: 0.25rem;
-	flex-grow: 1;
+	/* Colors */
+	--pf-text: var(--color-text-primary);
+	--pf-text-secondary: var(--color-text-secondary);
+	--pf-text-muted: var(--color-text-primary);
+	--pf-background: var(--color-bg);
+	--pf-border: var(--color-bg-border);
+	--pf-border-focus: var(--color-bg-border-accent);
+	--pf-skeleton: var(--color-bg);
+	--pf-skeleton-shine: var(--color-bg-200);
+	--pf-hover: var(--color-bg-accent);
+	--pf-mark: var(--color-text-primary);
+	--pf-scroll-shadow: var(--color-text-primary);
+
+	/* Shadows */
+	--pf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0);
+	--pf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0);
+	--pf-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0);
+
+	/* Error states */
+	--pf-error-bg: var(--color-bg);
+	--pf-error-border: var(--color-text-accent);
+	--pf-error-text: var(--color-text-primary);
+	--pf-error-text-secondary: var(--color-text-secondary);
+
+	/* Focus ring */
+	--pf-outline-focus: var(--color-text-accent);
+	--pf-outline-width: var(--panel-border);
+	--pf-outline-offset: var(--panel-border);
+
+	/* Typography */
+	--pf-font: var(--font-normal);
+
+	/* Sizing */
+	--pf-input-height: 36px;
+	--pf-input-font-size: 16px; /* Keep at 16px+ to prevent iOS auto-zoom on focus */
+	--pf-summary-font-size: 12px;
+	--pf-result-title-font-size: 14px;
+	--pf-result-excerpt-font-size: 13px;
+
+	/* Results layout */
+	--pf-results-display: flex;
+	--pf-results-flex-direction: column;
+	--pf-results-flex-wrap: nowrap;
+	--pf-results-columns: none; /* grid-template-columns value, used when display is grid */
+	--pf-results-gap: 8px;
+
+	--pf-border-radius: 0px;
+	--pf-image-width: 64px;
+	--pf-image-height: 48px;
+
+	/* Icons (SVG data URIs) */
+	--pf-icon-search: url("data:image/svg+xml,...");
+	--pf-icon-arrow: url("data:image/svg+xml,...");
+
+	/* Modal */
+	--pf-modal-backdrop: rgba(0, 0, 0, 0.8);
+	--pf-modal-max-width: 560px;
+	--pf-modal-max-height: min(80dvh, 800px);
+	--pf-modal-top: 10dvh;
+
+	/* Searchbox dimensions */
+	--pf-searchbox-max-width: 480px;
+	--pf-searchbox-dropdown-max-height: 320px;
+
+	/* Dropdown settings */
+	--pf-dropdown-max-height: 280px;
+	--pf-dropdown-z-index: 9999;
 }
 
-.pagefind-ui__search-clear,
-.pagefind-ui__button {
-	background: var(--color-bg);
-	border: var(--panel-border) solid var(--color-bg-border);
-	padding: 0.25rem;
-	flex: 0;
+/* hack that pagefind uses to determine css priority,
+but i do it for myself to override THEIR overrides */
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) .pf-heading-chip {
+	border-radius: 0;
 }
 
-.pagefind-ui__results {
-	list-style-type: none;
-	padding: 0;
-
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn {
+	border: var(--panel-border) solid var(--pf-border);
+	width: 100%;
+	min-width: 100%;
+}
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) pagefind-modal-header,
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) .pf-modal-header {
+	border-bottom: var(--panel-border) dotted var(--pf-border);
 }
 
-.pagefind-ui__result {
-	border: var(--panel-border) solid var(--color-bg-border);
-	padding: 1rem;
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) pagefind-modal-footer,
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) .pf-modal-footer {
+	border-top: var(--panel-border) dotted var(--pf-border);
 }
 
-.pagefind-ui__result-inner > .pagefind-ui__result-title:first-child {
-	margin: 0;
-	margin-bottom: 1rem;
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) dialog.pf-modal {
+	border: var(--panel-border) solid var(--pf-border);
+	border-radius: 0;
 }
 
-.pagefind-ui__result-inner > .pagefind-ui__result-title:first-child > .pagefind-ui__result-link {
-	text-decoration: none;
-	font-size: 1.5rem;
-	margin: 0;
-	font-weight: 700;
-	border-bottom: var(--panel-border) solid var(--color-text-secondary);
-	pointer-events: auto;
-	cursor: pointer;
+:is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-icon {
+	display: none;
 }
 
-.pagefind-ui__result-title {
-	margin-bottom: 0;
-	margin-top: 0;
+:is(*, #\#) pagefind-modal-trigger {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
 }
 
-.pagefind-ui__result-link {
-	text-decoration: none;
-	pointer-events: none;
-	cursor: default;
-}
-
-.pagefind-ui__result-excerpt {
-	font-style: italic;
-	color: var(--color-text-secondary);
-	margin-top: 0;
-	margin-bottom: 0.5rem;
-	position: relative;
-	top: -4px;
-}
-
-.pagefind-ui__result-excerpt:last-child {
-	margin-bottom: 0;
-}
-
-.pagefind-ui__result-excerpt::before {
-	content: "⤷ ";
-	font-size: 1.25rem;
-	padding-left: 0.5rem;
-	position: relative;
-	top: 1px;
-}
-
-.pagefind-ui__result-excerpt > mark {
-	background: var(--color-text-secondary);
-	color: var(--color-bg);
-}
 

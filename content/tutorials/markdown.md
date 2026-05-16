@@ -8,30 +8,6 @@ It is recommended to view this page from the website, as it both shows the lines
 
 [[toc]]
 
-
-## Headings
-
-This is what headings look like:
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-```
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-```
-
-All Markdown headings are clickable, to help make it easier to link to sections on a page.
-
-> [!IMPORTANT]
-> An `<h1>` tag is automatically created for every page, and should not be used. It is only used on this page for demonstratative purposes.
-
 ## Text
 
 > [!NOTE]
@@ -88,6 +64,21 @@ H~2~0, 29^th^
 ```
 H~2~0, 29^th^
 ```
+
+## Headings
+
+```
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+```
+
+All Markdown headings are clickable, to help make it easier to link to sections on a page.
+
+> [!IMPORTANT]
+> An `<h1>` tag is automatically created for every page, and should not be used. It is only used on this page for demonstratative purposes.
 
 ## Lists
 
@@ -209,14 +200,14 @@ Footnotes can be written over multiple lines.[^long-note]
 
 [^long-note]: This is the first paragraph.
 
-	This is the second paragraph. I'm intended to signal that I'm a part of the footnote.
+	This is the second paragraph. I'm indented to signal that I'm a part of the footnote.
 
 ```
 Footnotes can be written over multiple lines.[^long-note]
 
 [^long-note]: This is the first paragraph.
 
-	This is the second paragraph. I'm intended to signal that I'm a part of the footnote.
+	This is the second paragraph. I'm indented to signal that I'm a part of the footnote.
 ```
 
 ### Inline Notes

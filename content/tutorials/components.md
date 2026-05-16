@@ -1,5 +1,9 @@
 ---
 title: Components
+tags:
+  - sussy
+  - baka
+  - among us sussy
 ---
 
 [[toc]]

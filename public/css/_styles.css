@@ -135,6 +135,7 @@
 	border: var(--panel-border) solid var(--color-bg-border);
 	box-shadow: var(--panel-extrude) var(--panel-extrude) var(--color-bg-border-accent);
 	padding: 1rem;
+	line-height: 1;
 }
 @media screen and (max-width: 960px) {
 	.siteCard {
@@ -231,4 +232,51 @@
 	.sideLinks__a:hover::before,
 	.sideLinks__a:focus::before {
 		content: "> ";
+	}
+
+.footer {
+	border-top: var(--panel-border) solid var(--color-bg-border);
+}
+
+/* https://tobiasahlin.com/blog/hiding-an-element-if-its-empty/ */
+
+/* tldr: */
+/* The :empty matches any element that has no children. */
+/*
+ * We can combine the the :empty pseudo-class with :has(), to hide any
+ * .footer that has an empty .results div:
+ */
+
+/* idk if any of this makes sense */
+
+.footer:not(.footer:has(*)) {
+	display: none;
+}
+
+.pageTags {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+	.pageTags__li {
+		text-decoration: none;
+		color: var(--color-text-secondary);
+	}
+
+	.pageTags__title {
+		margin: 0;
+		color: var(--color-text-primary);
+	}
+
+	.pageTags > *:not(:last-child)::after {
+		/* create gaps between tags */
+		/* not sure how this works */
+		content: ".";
+		width: 0;
+		max-width: 0;
+		visibility: hidden;
 	}

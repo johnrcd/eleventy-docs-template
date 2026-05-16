@@ -2,11 +2,8 @@
 title: search
 ---
 
-<!-- <link href="/pagefind/pagefind-ui.css" rel="stylesheet"> -->
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="pagefind-ui__search"></div>
-<script>
-	window.addEventListener('DOMContentLoaded', (event) => {
-		new PagefindUI({ element: "#pagefind-ui__search", showSubResults: true });
-	});
-</script>
+<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+
+<pagefind-modal-trigger></pagefind-modal-trigger>
+<pagefind-modal></pagefind-modal>

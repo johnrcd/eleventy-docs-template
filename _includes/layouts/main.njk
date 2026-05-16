@@ -17,7 +17,12 @@ layout: layouts/_base.njk
 		<div class="sideContainer__sticky">
 			{# MIDDLE LEFT: SEARCH BAR #}
 			<div class="panel">
-				<a class="searchButton" href="/search/">search for page ⌕</a>
+				{# <a class="searchButton" href="/search/">search for page ⌕</a> #}
+				<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+				<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+
+				<pagefind-modal-trigger></pagefind-modal-trigger>
+				<pagefind-modal></pagefind-modal>
 			</div>
 
 			{# REST OF LEFT: LINKS #}
@@ -46,7 +51,22 @@ layout: layouts/_base.njk
 		{% if hideTitle %} {% else %}
 			<h1>{{ title }}</h1>
 		{% endif %}
+
 		{{ content | safe }}
+		<footer class="footer">
+			{%- set validTagsCount = tags | filterTagList | length %}
+			{%- if validTagsCount > 0 %}
+			<ul class="pageTags">
+				<p class="pageTags__title">tags: </p>
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tag/{{ tag | slugify }}/{% endset %}
+					<li class="pageTags__li">
+						<a href="{{ tagUrl }}" class="pageTags__li">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+					</li>
+				{%- endfor %}
+			{%- endif %}
+			</ul>
+		</footer>
 	</main>
 
 	{# RIGHT COLUMN #}

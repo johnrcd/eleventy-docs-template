@@ -2,13 +2,7 @@
 title: Permalinks
 ---
 
-By default, all links have their own directory, named based on the title of the page. URLs have a limited set of characters they can use, so they'll be transformed to not break in a process known as *slugifying*: all text becomes lowercase, and spaces are replaced with dashes (-). If you have emojis, other less common symbols, or any characters that URL's use to define parts of the link (slashes and dots), they will be omitted.
-
-- "Hello World" > [www.example.com/hello-world/](/hello-world/)
-- "lowercase UPPERCASE title" > [www.example.com/lowercase-uppercase-title/](/lowercase-uppercase-title/)
-- 😀happy PAGE!!!🤗 > [www.example.com/happy-page/](/happy-page/)
-
-The exception is the home page, which is simply stored at the root:
+By default, all pages have URLs that are based on their title. The exception is the home page, which is simply stored at the root:
 
 [www.example.com](/)
 
@@ -25,6 +19,8 @@ Applies to the root folder:
 But also to any sub directory, including the one that this page is written in:
 
 `content/docs/customization/permalinks.md`
+
+When writing page titles, ensure that they are unique [when slugified](/slug/).
 
 ## Remove Trailing Slash
 

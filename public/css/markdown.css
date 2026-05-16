@@ -123,8 +123,8 @@
 }
 
 .footnotes-list {
-	margin-bottom: 0;
-	border-top: var(--panel-border) solid var(--color-text-secondary);
+	margin-bottom: 1rem;
+	border-top: var(--panel-border) solid var(--color-bg-border);
 	padding-top: 1rem;
 }
 

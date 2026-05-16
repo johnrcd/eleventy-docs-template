@@ -94,7 +94,16 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts", "post", "blog", "page", "pages", "user page"].indexOf(tag) === -1);
+		let t = (tags || [])
+
+		// remove special tags
+		t = t.filter(tag => ["all", "posts", "post", "blog", "page", "pages", "user page"].indexOf(tag) === -1)
+
+		// remove duplicate tags
+		let s = new Set(t);
+		t = [...s];
+
+		return t;
 	});
 
 	eleventyConfig.addFilter("sortAlphabetically", strings =>

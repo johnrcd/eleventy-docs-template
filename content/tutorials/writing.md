@@ -1,16 +1,16 @@
 ---
-title: Writing
+title: Writing Reference
 ---
 
 [[toc]]
 
-Pages in this project are written in *Markdown*. You do not need previous knowledge on what it is--- Markdown is designed to be a very simple and easy to understand markup language, so you can quickly pick up the basics just by trying it out.
+Pages in this project are written in *Markdown*, a markup language designed on simplicity and ease of use. Specifically, it uses the `markdown-it` processor, alongside a bunch of plugins to extend it's functionality.
 
-This tutorial assumes that you have the capability of editing pages at the source level (or at the very least, just for the page contents); that you can edit the raw markdown code directly.
-
-## Basics
+This page goes over the different capabilities you have when writing a page or post. It assumes that you have the capability of editing the source code of a page directly.
 
 It is recommended to view this page from the website, as it both shows the lines of code and what they output.
+
+## Basics
 
 ### Paragraphs
 
@@ -278,9 +278,50 @@ The list is shorter, so you can just check out the [source code](https://github.
 > <//3
 > ```
 
-## Complex Features and Components
+## Frontmatter
 
-Generally, you will want to build your own components to add visual interest to your pages. Markdown is excellent for text content, but often suffers with anything too complex.
+Frontmatter is a special bit of code at the very top of each post that gives metadata used when your websites files are built. If you are editing this website with a content management system, you may not need to read this section.
 
-This template has several components that you can use as a reference for your own projects. It is recommended to view this directly on the website, as it shows both the code to create a component and what it looks like when the website is running.
+Frontmatter is written in YAML, always at the top of the page (but not actually visibly on the page), identified by three dashes at the top and bottom of the frontmatter code:
 
+```yaml
+---
+title: Writing Reference
+---
+
+[[toc]]
+
+Pages in this project are written in *Markdown*...
+
+(rest of text omitted)
+```
+
+### `title`
+
+The `title` field is a required field, and the one one that needs to be. It is used to generate the page title.
+
+Titles *must* be unique. Specifically, they must be unique when [slugified](/permalinks/)---a process to convert text into something that can be used in a URL. Failing to do so will result in the website being unable to build.
+
+### `permalink`
+
+A permalink is the location a page will be built to. By default, it is already set to a slugified version of the page title, but can be overidden for specific pages.
+
+For example, [the page containing all tags](/tags/) has a different post than permalink path:
+
+```
+---
+permalink: /tags/
+title: List of All Tags
+---
+```
+
+### `tags`
+
+Pages can be given tags. This project template uses tags to generate tag pages, which can be used to navigate through your website. Tags are given as a list.
+
+Tags are not intended to be a primary form of site navigation, and can be ignored entirely.
+
+```
+tags:
+  - docs
+```

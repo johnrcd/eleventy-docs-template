@@ -12,13 +12,7 @@ permalink: "/"
 Welcome to the Eleventy Docs Template!
 </p>
 
-This repository is a template for building documentation websites. It's ideal for small-to-medium projects when you need something up and running quickly.
-
-The links you need to get started are all on the side bar, except if you're on mobile, which hides the side bar.
-
-Hm.
-
-As a backup, take this (poorly made) navigation panel!
+This is a project template for building documentation websites. It's intended for small-to-medium projects with one or a few documentation writers.
 
 ::: cardSelect--labelOverlap
 - [![](/public/img/chars/char_caster.png)  ](/getting-started/)    <p>Getting Started </p>
