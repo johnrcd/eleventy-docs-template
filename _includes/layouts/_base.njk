@@ -3,13 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>
-			{% if title %}
-					{{ title }} | {{ metadata.site_name }}
-			{% else %}
-				{{ metadata.site_name }}
-			{% endif %}
-		</title>
+		<title>{% if title %}{{- title -}}&nbsp;|&nbsp;{{- metadata.site_name -}}{% else %}{{- metadata.site_name -}}{% endif %}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon/apple-touch-icon.png">
