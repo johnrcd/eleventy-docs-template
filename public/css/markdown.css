@@ -144,7 +144,8 @@
 
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	margin-bottom: 2em;
+	/* margin-bottom: var(--panel-padding); */
+	margin-bottom: 0;
 	text-align: center;
 	gap: var(--panel-padding);
 }
